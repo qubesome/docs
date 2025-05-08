@@ -1,0 +1,27 @@
+site_name: qubesome
+site_url: https://qubesome.com
+repo_url: https://github.com/qubesome/docs
+
+theme: 
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+  - go
+
+docs_dir: src
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+nav:
+  - Home: index.md
+  - FAQ: faq.md
