@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><link rel="canonical" href="https://qubesome.com/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>qubesome</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> qubesome
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-can-it-be-useful">How can it be useful?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#opensuse-leap-and-tumbleweed">openSUSE Leap and Tumbleweed</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#go-install">Go install</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#build-from-source">Build from source</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#release-binaries">Release binaries</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sample-awesomewm">Sample awesomeWM</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sample-i3">Sample i3</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="faq/">FAQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">qubesome</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/qubesome/docs/edit/master/docs/index.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="qubesome">qubesome</h1>
+<p>This project is a command-line interface (CLI) tool aimed at simplifying managing Linux desktop configurations. It works by virtualizing both the Window Manager and the workloads based on a declarative state from a git repository. Some isolation levels are available to further secure and constraint each workload.</p>
+<h2 id="how-can-it-be-useful">How can it be useful?</h2>
+<ul>
+<li>Version control your window manager and workloads configuration.</li>
+<li>Bump configuration and software versions via PRs - and roll them back in the same way.</li>
+<li>Provide isolation across profiles and workloads (clipboard, network, storage, etc).</li>
+<li>Test-drive Window Manager configurations without having to commit to them or needing to impact your existing setup.</li>
+<li>Simplify the sharing of Window Manager configuration.</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="installation">Installation</h3>
+<h4 id="opensuse-leap-and-tumbleweed">openSUSE Leap and Tumbleweed</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>zypper<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>qubesome
+</span></code></pre></div>
+<h4 id="go-install">Go install</h4>
+<div class="admonition info requirements">
+<p class="admonition-title">Info</p>
+<p>This requires Golang to be installed. You can download and install Golang by following the instructions at <a href="https://golang.org/doc/install">https://golang.org/doc/install</a>. </p>
+<p>Ensure that the Go bin directory (usually <code>$HOME/go/bin</code>) is added to your <code>PATH</code>. For guidance on updating your <code>PATH</code>, refer to <code>GOPATH</code> and <code>GOBIN</code> in <a href="https://golang.org/doc/gopath_code.html">https://golang.org/doc/gopath_code.html</a>.</p>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>go<span class="w"> </span>install<span class="w"> </span>github.com/qubesome/cli/cmd/qubesome@latest
+</span></code></pre></div>
+<h4 id="build-from-source">Build from source</h4>
+<div class="admonition info requirements">
+<p class="admonition-title">Info</p>
+<p>This requires Golang to be installed. You can download and install Golang by following the instructions at <a href="https://golang.org/doc/install">https://golang.org/doc/install</a>.</p>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/qubesome/cli
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>cli
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>make<span class="w"> </span>build
+</span></code></pre></div>
+<p>The binary is available at <code>build/bin/qubesome</code> and can be installed at
+machine level with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">755</span><span class="w"> </span>build/bin/qubesome<span class="w"> </span>/usr/local/bin/
+</span></code></pre></div>
+<h4 id="release-binaries">Release binaries</h4>
+<p>The repository release page include binaries for <code>amd64</code>, <code>arm64</code> and <code>riscv64</code>, and can be found at https://github.com/qubesome/cli/releases.</p>
+<h3 id="usage">Usage</h3>
+<p>To start a new Window Manager profile based on the sample dotfiles, set the Git repository and the profile name.</p>
+<h4 id="sample-awesomewm">Sample awesomeWM</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>qubesome<span class="w"> </span>start<span class="w"> </span>-git<span class="w"> </span>https://github.com/qubesome/sample-dotfiles<span class="w"> </span>awesome
+</span></code></pre></div>
+<h4 id="sample-i3">Sample i3</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>qubesome<span class="w"> </span>start<span class="w"> </span>-git<span class="w"> </span>https://github.com/qubesome/sample-dotfiles<span class="w"> </span>i3
+</span></code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="faq/" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/qubesome/docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+      <span><a href="faq/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-11-11 09:07:41.443829+00:00
+-->
